@@ -1,0 +1,20 @@
+version: '3' 
+services:
+    registry:
+      image: eurekaa
+      hostname: registry
+      ports: 
+      - "8761:8761"
+    web:
+      image: service1
+      depends_on: 
+      - registry
+      hostname: service1
+      ports: 
+      - "8080:8080"
+    dashboard:
+      image: dashboard
+      hostname: dashboard
+      ports:
+      - "9000:9000"
+   
