@@ -17,4 +17,9 @@ services:
       hostname: dashboard
       ports:
       - "9000:9000"
+    securedapp:
+      image: secured
+      hostname: securedapp
+      ports:
+      - "8086:8086"
    
